@@ -1,0 +1,118 @@
+.container {
+  text-align: center;
+  padding: 0px;
+}
+
+.title {
+  margin-top: 40px;
+  color: white;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title span {
+  color: #26ffcb;
+  padding-left: 15px;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 220px;
+  height: 80px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #1f3540;
+  font-size: 24px;
+  color: #26ffbb;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #26404b;
+  transform: scale(1.05);
+}
+
+/* ===== GAME BOARD ===== */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+  gap: 10px;
+  width: 90vw;
+  max-width: 560px;
+  margin: 40px auto;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1; /* keeps square shape */
+  background: #1f3540;
+  border: 4px solid #0f1b21;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.boxes:hover {
+  background: #26404b;
+  transform: scale(1.03);
+}
+
+.boxes img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .board {
+    max-width: 400px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .title h1{
+    font-size: 10px;
+    flex-direction: column;
+    color: red !important;
+  }
+  img{
+        margin-top: 5px;
+    height: 40px;
+    margin-left: 10px;
+
+  }
+
+  .board {
+    width: 95vw;
+    gap: 8px;
+  }
+
+  button {
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
